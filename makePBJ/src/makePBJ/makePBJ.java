@@ -4,6 +4,7 @@
 package makePBJ;
 
 import java.util.Scanner;
+import java.util.Random;
 /**
  * @author corey
  *
@@ -20,14 +21,14 @@ public class makePBJ {
 	
 		
 		System.out.println("step 1: gather ingredients");
-		System.out.println("        " + totalInt + " oz(s) of peanut butter");
-		System.out.println("        " + totalInt + " oz(s) of jelly");
+		System.out.println("        " + 2*totalInt + " tablespoon(s) of peanut butter");
+		System.out.println("        " + 2*totalInt + " teaspoon(s) of jelly");
 		System.out.println("        " + 2 * totalInt + " slice(s) of bread");
 		System.out.println("        "+ totalInt + " ziplock bag(s)");
 		System.out.println(" ");
-		System.out.println("step 2: spread " + totalInt + " oz(s) of peanut butter on " + totalInt + " slice(s) of bread");
+		System.out.println("step 2: spread " + 2*totalInt + " tablespoon(s) of peanut butter on " + totalInt + " slice(s) of bread");
 		System.out.println(" ");
-		System.out.println("step 3: spread " + totalInt + " oz(s) of jelly on " + totalInt + " slice(s) of bread");
+		System.out.println("step 3: spread " + 2*totalInt + " teaspoon(s) of jelly on " + totalInt + " slice(s) of bread");
 		System.out.println(" ");
 		System.out.println("step 4: combine " + totalInt + " peanut butter slice(s) with " +totalInt + " jelly splice(s)");
 		System.out.println(" ");
@@ -54,7 +55,16 @@ public class makePBJ {
 				System.out.println("That's invalid. Please input the number (int) of sandwiches");
 			}
 		
-		int myInt = 3;
+		
+		Random dice = new Random();
+		int myInt;
+		
+		for(int counter=0; counter<1; counter++) {
+			myInt = 1 + dice.nextInt(7);
+			System.out.println(myInt + " ");
+		
+		
+		
 		int totalInt = userInt + myInt;
 		
 		
@@ -65,6 +75,7 @@ public class makePBJ {
 		System.out.println(" ");
 		
 		makeSandwich(totalInt);
+		}
 	}
 
 }
