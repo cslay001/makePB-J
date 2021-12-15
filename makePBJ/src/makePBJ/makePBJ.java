@@ -25,7 +25,7 @@ public class makePBJ {
 		int userInt = input.nextInt();
 		
 			while (userInt <=0) {
-				System.out.println("That's invalid. Please input the base of the triangle (in inches)");
+				System.out.println("That's invalid. Please input the number (int) of sandwiches");
 			}
 		
 		int myInt = 3;
